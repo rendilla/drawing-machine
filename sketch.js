@@ -2,8 +2,8 @@
 let array = []
 
 function setup() {
-  createCanvas(600, 600);
-  background(200);
+  createCanvas(windowWidth, windowHeight);
+  background(255);
 
   strokeWeight(2);
   noFill();
@@ -13,10 +13,9 @@ function setup() {
 function draw() {
 
 if (mouseIsPressed){
-  stroke(map(mouseX, 0, 600, 0, 255, true))
-  // line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
-  // line(mouseX, mouseY, pmouseX, pmouseY);
-  array.push([mouseX, mouseY]);
+  line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
+  line(mouseX, mouseY, pmouseX, pmouseY);
+
   }
 }
 
